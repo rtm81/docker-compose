@@ -3,4 +3,4 @@ services:
   sonar:
     image: crccheck/hello-world:latest
     ports:
-      - "${HOST_PORT}:9000"
+      - "${HOST_PORT}:8000"

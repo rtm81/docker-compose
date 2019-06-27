@@ -14,9 +14,11 @@ services:
   sonar:
     depends_on:
       - db
-    image: sonarqube:6.1-alpine
+    image: roscoe/sonarqube:6.1-alpine
     env_file:
       - .env
+    build:
+      context: ./docker/sonar
     volumes:
       - sonarqube_conf:/opt/sonarqube/conf
       - sonarqube_data:/opt/sonarqube/data
